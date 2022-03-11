@@ -1,0 +1,134 @@
+
+/* li menu nav */
+
+.nav li {
+    display: inline-block;
+}
+
+.nav li::after {
+    content: "/";
+    padding: 12px;
+}
+
+.nav li:last-child::after {
+    content: normal;
+}
+
+.nav li:last-child {
+    color: #fff;
+    background-color: #232323;
+    padding: 0.6rem 1.6rem;
+    border-radius: 80px;
+}
+
+/* menu tumnail hover */
+
+.hvr {
+    display: none;
+    animation: 0.5s;
+}
+
+.mnu a:hover .hvr {
+    display: block;
+}
+
+/* mega menu css */
+
+.mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    overflow-y: auto;
+    max-height: 80vh;
+    direction: ltr;
+    scrollbar-color: #d4aa70 #e4e4e4;
+    scrollbar-width: thin;
+}
+
+.mega-menu::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mega-menu::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background: #F84B00;
+}
+
+.footer-menu{
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    background: #f3f4f6;
+    text-align: center;
+}
+/* #hoverable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.hoverable {
+    position: static;
+}
+
+.hoverable>a:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.hoverable:hover .mega-menu {
+    display: block;
+}
+
+
+/* #toggle Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.toggleable>label:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.toggle-input {
+    display: none;
+}
+
+.toggle-input:not(checked)~.mega-menu {
+    display: none;
+}
+
+.toggle-input:checked~.mega-menu {
+    display: block;
+}
+
+.toggle-input:checked+label {
+    color: white;
+    background: #2c5282;
+    /*@apply bg-yellow-500 */
+}
+
+.toggle-input:checked~label:after {
+    content: "\25B2";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.nav_mp li>a {
+    padding: 5px 0px;
+    display: block;
+    transition: 0.5s;
+}
+
+.nav_mp li>a:hover {
+    padding: 5px 10px;
+    /* color: #fff; */
+    font-weight: bold;
+}

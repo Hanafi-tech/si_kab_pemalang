@@ -1,0 +1,407 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/b.app.css">
+    <link rel="stylesheet" href="./css/c.app.css">
+</head>
+
+<body class="font-poppins">
+    <div class="overflow-hidden relative bg-slate-100">
+        <header>
+            <!-- menu dekstop -->
+            <div class="hidden md:block fixed z-20 top-0 w-full filter drop-shadow-lg">
+                <nav class="relative font-medium transition-all duration-500 bg-white" id="navbarMain">
+                    <div class="container mx-auto flex justify-between px-4">
+                        <div class="flex flex-row justify-center">
+                            <svg class="my-auto" width="50" height="60" xmlns="http://www.w3.org/2000/svg">
+                                <image href="./img/logo/Logo_Kabupaten_Pemalang.png" height="60" width="50"
+                                    id="image_logo" />
+                            </svg>
+                            <h1 class="py-9 px-4 text-xl">Industri Kab Pemalang</h1>
+                        </div>
+                        <ul class="flex">
+                            <!--Regular Link-->
+                            <li class="hover:text-yellow-500">
+                                <a href="index.html" class="relative block py-9 px-4 text-sm lg:text-base">Berita
+                                    Terkini</a>
+                            </li>
+                            <li class="hover:text-yellow-500">
+                                <a href="#" class="relative block py-9 px-4 text-sm lg:text-base">Industri Kab
+                                    Pemalang</a>
+                            </li>
+                            <li>
+                                <a href="#" class="relative block py-9 px-2 text-sm lg:text-base">
+                                    <span
+                                        class="bg-yellow-500 hover:bg-yellow-600 px-7 py-2 rounded-full text-white  transition-all duration-500">Daftar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- menu mobile -->
+            <div class="md:hidden fixed z-20 top-0 w-full bg-white">
+                <div class="container mx-auto px-4">
+                    <nav class="py-4 flex justify-between">
+                        <div class="flex items-center">
+                            <svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+                                <image href="./img/logo/Logo_Kabupaten_Pemalang.png" height="40" width="40" />
+                            </svg>
+                        </div>
+                        <!-- button -->
+                        <button class="mobile-menu-button">
+                            <img class="px-2" src="https://img.icons8.com/material-outlined/24/000000/menu--v1.png" />
+                        </button>
+                    </nav>
+                    <!-- menu -->
+                    <div class="mobile-menu hidden uppercase font-bold text-xs">
+                        <a href="#" class="block hover:border-locus-orange px-2 py-4">Produk</a>
+                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4">Tentang</a>
+                        <a href="#" class="block hover:border-locus-orange px-2 py-4">Blog</a>
+                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4">Kontak</a>
+                        <a href="#" class="block hover:border-locus-orange px-2 py-4">Lowongan</a>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <script>
+                    const btn = document.querySelector('button.mobile-menu-button')
+                    const menu = document.querySelector('.mobile-menu')
+                    btn.addEventListener('click', () => {
+                        menu.classList.toggle('hidden')
+                    })
+                </script>
+            </div>
+        </header>
+        <div class="h-screen w-full bg-white">
+            <section class="cover-banner"
+                style="background-image: url('./img/banner.jpg');background-position: center;">
+                <div class="banner-inner">
+                    <h1 class="banner-title1">Sistem informasi industri <span
+                            class="text-yellow-500 font-medium">Kabupaten
+                            Pemalang</span>
+                    </h1>
+                    <h2 class="banner-title2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum deserunt
+                        illum commodi.</h2>
+                    <h2 class="banner-title2">Lorem ipsum dolor sit.</h2>
+                    <a href="https://app.mockplus.com/app" class="banner-btn font-medium"
+                        onclick="ga('send', 'event', 'Mockplus-sign-up1', 'click', 'Mockplus-home', 1);">Daftar
+                        Sekarang</a>
+                </div>
+            </section>
+        </div>
+        <style>
+            .swiper {
+                width: 100%;
+                height: 100%;
+            }
+
+            .swiper-slide {
+                /* text-align: center; */
+                font-size: 18px;
+                /* background: #fff; */
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                /* top: 20px; */
+                width: 20px;
+                height: 20px;
+                background: #164e63;
+                color: #fff;
+                padding: 15px;
+                border-radius: 50%;
+            }
+
+            .swiper-button-next:hover,
+            .swiper-button-prev:hover {
+                background: #277b99;
+            }
+
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+                font-size: 10px;
+            }
+
+            input:focus {
+                border: 1px solid #277b99;
+                outline: none !important;
+                box-shadow: 0 0 5px #277b99;
+            }
+        </style>
+        <!-- <div class="flex gap-5 mx-auto container p-6 lg:px-10 lg:py-20"> -->
+        <div class="mx-auto container p-6 lg:px-10 lg:py-20">
+            <!-- <div class="w-2/3"> -->
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-xl font-medium">Berita Terkini</h1>
+                <a href="#" class="text-yellow-500 font-medium">Lihat semua</a>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/Operasi _Candi.jpg"
+                                    class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Ciptakan Kondisi Jelang Ramadhan Polres...</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Guna menciptakan situasi
+                                    yang kondusif
+                                    menjelang bulan....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/plh.jpg" class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Plh Bupati Banjarnegara Silaturahmi Ke Pemalang</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Merasa tersanjung dengan
+                                    sambutan hangat yang diterimanya....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/Viralkan.jpg" class="object-cover rounded-tr-lg rounded-tl-lg"
+                                    alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Bupati Ajak Viralkan potensi unggulan</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Bupati Pemalang Mukti Agung Wibowo
+                                    mengajak kepada....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/opd.jpg" class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Bupati Monitoring Operasi Pasar Minyak Goreng</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> –Bupati Pemalang, Mukti Agung Wibowo, Kamis
+                                    didampingi Sekda M. Arifin....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/Operasi _Candi.jpg"
+                                    class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Ciptakan Kondisi Jelang Ramadhan Polres...</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Guna menciptakan situasi
+                                    yang kondusif
+                                    menjelang bulan....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <div class="mx-auto container p-6 lg:px-10 mb-16">
+            <!-- <div class="w-2/3"> -->
+            <div class="flex justify-between items-center py-4">
+                <h1 class="text-xl font-medium">Industri Kab Pemalang</h1>
+                <a href="#" class="text-yellow-500 font-medium">Lihat semua</a>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/Operasi _Candi.jpg"
+                                    class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Ciptakan Kondisi Jelang Ramadhan Polres...</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Guna menciptakan situasi
+                                    yang kondusif
+                                    menjelang bulan....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/plh.jpg" class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Plh Bupati Banjarnegara Silaturahmi Ke Pemalang</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Merasa tersanjung dengan
+                                    sambutan hangat yang diterimanya....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/Viralkan.jpg" class="object-cover rounded-tr-lg rounded-tl-lg"
+                                    alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Bupati Ajak Viralkan potensi unggulan</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Bupati Pemalang Mukti Agung Wibowo
+                                    mengajak kepada....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/opd.jpg" class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Bupati Monitoring Operasi Pasar Minyak Goreng</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> –Bupati Pemalang, Mukti Agung Wibowo, Kamis
+                                    didampingi Sekda M. Arifin....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="w-full filter shadow-lg shadow-slate-200 rounded-lg">
+                            <div class="h-40 rounded-tr-lg rounded-tl-lg bg-gray-100">
+                                <img src="./img/images/Operasi _Candi.jpg"
+                                    class="object-cover rounded-tr-lg rounded-tl-lg" alt="">
+                            </div>
+                            <div class="pt-2 pb-5 px-4 bg-white rounded-br-lg rounded-bl-lg">
+                                <h1 class="text-lg font-medium leading-4 lg:leading-5 py-2 text-green-600">
+                                    Ciptakan Kondisi Jelang Ramadhan Polres...</h1>
+                                <hr>
+                                <p class="text-left mt-2 mb-4 text-base leading-6"><span
+                                        class="font-medium">PEMALANG</span> – Guna menciptakan situasi
+                                    yang kondusif
+                                    menjelang bulan....
+                                </p>
+                                <a href="#" class="block bg-yellow-500 text-white p-2 text-center">Selengkapnya..</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="bg-slate-900">
+            <div class="container p-6">
+                <div class="text-center text-white">
+                    ©Sistem Informasi <a href="#" class="text-yellow-500">Kabupaten Pemalang</a> 2022 - <span
+                        class="font-extralight">Hak Cipta Dilindungi</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            "@0.00": {
+                slidesPerView: 2,
+                spaceBetween: 5,
+            },
+            "@0.75": {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            "@1.00": {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        },
+    });
+</script>
+
+</html>

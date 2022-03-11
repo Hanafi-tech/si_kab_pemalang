@@ -1,0 +1,108 @@
+.cover-banner {
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 500px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-attachment: fixed;
+            }
+
+            .cover-banner::before {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(16 174 207 / 16%);
+                z-index: 1;
+                content: '';
+            }
+
+            .cover-banner .banner-inner {
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                left: 0;
+                padding: 0 30px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                top: 50%;
+                color: #ffffff;
+                text-align: center;
+                margin-top: -90px;
+            }
+
+            .cover-banner .banner-inner .banner-title1 {
+                font-size: 38px;
+            }
+
+            .cover-banner .banner-inner .banner-title1 {
+                font-size: 44px;
+                color: #ffffff;
+                line-height: 1.5;
+                letter-spacing: 0;
+                margin-bottom: 16px;
+            }
+
+            .clear-space h1,
+            .clear-space h2,
+            .clear-space h3,
+            .clear-space h4,
+            .clear-space h5,
+            .clear-space h6 {
+                font-weight: 400;
+            }
+
+            .cover-banner .banner-inner .banner-title2 {
+                font-size: 18px;
+            }
+
+            .cover-banner .banner-inner .banner-title2 {
+                font-size: 20px;
+                line-height: 1.6;
+                letter-spacing: 0;
+                font-weight: 400;
+                margin: 0 auto 10px;
+            }
+
+            .banner-btn {
+                padding: 0 34px;
+                margin: 72px auto 25px;
+                line-height: 56px;
+                border-radius: 50PX;
+                height: 56px;
+                font-size: 16px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                background: #eab308;
+                display: inline-block;
+                color: #ffffff;
+                -webkit-transition: 0.3s;
+                -o-transition: 0.3s;
+                transition: 0.3s;
+                text-align: center;
+            }
+
+            .banner-btn:hover {
+                background: #ca8a04;
+            }
+
+            @media (max-width: 500px) {
+                .cover-banner .banner-inner .banner-title1 {
+                    font-size: 22px;
+                }
+
+                .cover-banner .banner-inner {
+                    padding: 0 8%;
+                }
+
+                .cover-banner .banner-inner .banner-title2 {
+                    font-size: 14px;
+                }
+            }
