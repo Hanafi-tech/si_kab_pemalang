@@ -177,10 +177,72 @@
                     </nav>
                     <!-- menu -->
                     <div class="mobile-menu hidden uppercase font-bold text-xs">
-                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4">Berita
-                            Terkini</a>
-                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4">Industri Kab
-                            Pemalang</a>
+                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4 btn_publikasi">
+                            <div class="flex justify-between">
+                                <p>Publikasi</p>
+                                <span>
+                                    <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-500 ease-in-out"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="bg-slate-200 show_publikasi hidden">
+                            <a href="#" class="block px-6 py-2">Berita</a>
+                            <a href="#" class="block px-6 py-2">Peraturan</a>
+                        </div>
+                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4 btn_dataindustri">
+                            <div class="flex justify-between">
+                                <p>Data Industri</p>
+                                <span>
+                                    <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-500 ease-in-out"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="bg-slate-200 show_dataindustri hidden">
+                            <a href="#" class="block px-6 py-2">Sentra Industri</a>
+                            <a href="#" class="block px-6 py-2 btn_dataindustri_sub">
+                                <div class="flex justify-between">
+                                    <p>Data Industri</p>
+                                    <span>
+                                        <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-500 ease-in-out"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                            <path
+                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="bg-slate-200 show_dataindustri_sub hidden">
+                                <a href="#" class="block px-10 py-2">Industri Kecil</a>
+                                <a href="#" class="block px-10 py-2">Industri Menengah</a>
+                                <a href="#" class="block px-10 py-2">Industri Besar</a>
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="block hover:border-locus-bluedark px-2 py-4 btn_layanan">
+                            <div class="flex justify-between">
+                                <p>Layanan</p>
+                                <span>
+                                    <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180 transition duration-500 ease-in-out"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                        <div class="bg-slate-200 show_layanan hidden">
+                            <a href="#" class="block px-6 py-2">Berita</a>
+                            <a href="#" class="block px-6 py-2">Peraturan</a>
+                        </div>
+                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4">Kontak</a>
+                        <a href="#" class="block hover:border-locus-bluedark px-2 py-4">Pengaduan</a>
                         <a href="daftar.html" class="block hover:border-locus-orange px-2 py-4">Daftar</a>
                     </div>
                 </div>
@@ -191,6 +253,36 @@
                     btn.addEventListener('click', () => {
                         menu.classList.toggle('hidden')
                     })
+
+                    // btn area
+                    const btn_publikasi = document.querySelector('.btn_publikasi')
+                    const btn_dataindustri = document.querySelector('.btn_dataindustri')
+                    const btn_layanan = document.querySelector('.btn_layanan')
+                    const btn_dataindustri_sub = document.querySelector('.btn_dataindustri_sub')
+
+                    // effected area    
+                    const show_publikasi = document.querySelector('.show_publikasi')
+                    const show_dataindustri = document.querySelector('.show_dataindustri')
+                    const show_layanan = document.querySelector('.show_layanan')
+                    const show_dataindustri_sub = document.querySelector('.show_dataindustri_sub')
+
+                    // click action area
+                    btn_publikasi.addEventListener('click', () => {
+                        show_publikasi.classList.toggle('hidden')
+                    })
+
+                    btn_dataindustri.addEventListener('click', () => {
+                        show_dataindustri.classList.toggle('hidden')
+                    })
+
+                    btn_dataindustri_sub.addEventListener('click', () => {
+                        show_dataindustri_sub.classList.toggle('hidden')
+                    })
+
+                    btn_layanan.addEventListener('click', () => {
+                        show_layanan.classList.toggle('hidden')
+                    })
+
                 </script>
             </div>
         </header>
